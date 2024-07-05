@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# Delivery Fee Calculator App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Delivery Fee Calculator App! This app helps users calculate the delivery fee based on various factors such as cart value, delivery distance, number of items, and order time. Let's get started!
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### Input Fields
 
-### `npm start`
+1. **Cart Value:** Enter the value of your shopping cart in euros.
+2. **Delivery Distance:** Provide the distance between the store and your location in meters.
+3. **Number of Items:** Specify the number of items in your shopping cart.
+4. **Order Time:** Select the date and time when you're making the order.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Calculation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Once you've entered all the required information, the app will calculate the delivery fee based on the specified rules:
 
-### `npm test`
+- A small order surcharge is added if the cart value is less than 10€.
+- A base delivery fee is applied for the first 1000 meters, with additional charges for longer distances.
+- Surcharge for the number of items above the threshold, with an extra fee for bulk items.
+- Free delivery for cart values equal to or more than 200€.
+- Rush hour surcharge applies during Fridays from 3 PM to 7 PM browser time.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Output
 
-### `npm run build`
+The app displays the calculated delivery fee in euros.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This app is built using React and TypeScript.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+- npm (Node Package Manager) installed
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Start the application:
+   ```bash
+   npm start
+   ```
+3. Access the application at http://localhost:3000/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Notes
+- Date time field is always pre-populated with current browser's date and time and also it is kept editable for the testing purpose.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
